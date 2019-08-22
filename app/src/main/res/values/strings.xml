@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Skincare</string>
+    <string name="sc_name">Skincare Details</string>
+    <string name="sc_func">Fungsi Skincare</string>
+</resources>
