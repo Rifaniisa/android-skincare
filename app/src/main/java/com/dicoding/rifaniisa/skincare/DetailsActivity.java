@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    ImageView imageView;
+    ImageView imageView, icFav, icShare;
     TextView tvDataSkincare, tvDataScDesc, tvPrice;
 
     public static final String SKINCARE_NAME = "skincare_name";
@@ -22,6 +23,8 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setActionBarTitle("Skincare Details");
         setContentView(R.layout.activity_details);
 
         Toolbar toolbar = findViewById(R.id.myToolbar);
@@ -40,14 +43,22 @@ public class DetailsActivity extends AppCompatActivity {
         tvDataScDesc = findViewById(R.id.sc_desc);
         imageView = findViewById(R.id.img_item_photo);
         tvPrice = findViewById(R.id.skincare_price);
-        String name = getIntent().getStringExtra(SKINCARE_NAME);
+
+        final String name = getIntent().getStringExtra(SKINCARE_NAME);
         String desc = getIntent().getStringExtra(SKINCARE_DESC);
         String img = getIntent().getStringExtra(SKINCARE_IMAGE);
         String price = getIntent().getStringExtra(SKINCARE_PRICE);
+
         tvDataSkincare.setText(name);
         tvDataScDesc.setText(desc);
         Glide.with(this).asBitmap().load(img).into(imageView);
         tvPrice.setText(price);
 
+    }
+
+    private void setActionBarTitle(String title){
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setTitle(title);
+        }
     }
 }

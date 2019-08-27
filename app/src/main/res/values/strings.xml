@@ -2,4 +2,11 @@
     <string name="app_name">Skincare</string>
     <string name="sc_name">Skincare Details</string>
     <string name="sc_func">Fungsi Skincare</string>
+    <string name="share">Share</string>
+    <string name="favorite">Favorite</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="linked_in">Linked in</string>
+    <string name="username">Rif\'Atunnisa</string>
+    <string name="emailUser">rifarifatunnisa@gmail.com</string>
 </resources>

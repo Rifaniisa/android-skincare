@@ -5,10 +5,9 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_favorite"
-        android:orderInCategory="300"
-        android:title="User"
-        android:icon="@drawable/ic_person_black_24dp"
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_girl"
+        android:title="Profile"
         app:showAsAction="ifRoom"></item>
 
 </menu>

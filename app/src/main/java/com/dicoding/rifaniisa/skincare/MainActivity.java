@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_favorite) {
+        if (id == R.id.action_profile) {
             Intent intentProfile = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intentProfile);
             return true;
@@ -82,11 +82,5 @@ public class MainActivity extends AppCompatActivity {
        intentDetails.putExtra(DetailsActivity.SKINCARE_PRICE, sc.getPrice());
        startActivity(intentDetails);
 
-    }
-
-    private void setActionBarTitle(String title){
-        if (getSupportActionBar() != null){
-            getSupportActionBar().setTitle(title);
-        }
     }
 }
